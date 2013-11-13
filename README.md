@@ -22,9 +22,9 @@ Signature="$WINDOWS NT$"
 Provider=%Intel%
 ClassGUID={4D36E968-E325-11CE-BFC1-08002BE10318}
 Class=Display
-CatalogFile=igdlh.cat
+CatalogFile=kit51428.cat
 
-DriverVer=07/31/2012,8.15.10.2827
+DriverVer=01/30/2013,8.15.10.2993
 
 ;
 ; Package Info for Co-Installer
@@ -72,13 +72,6 @@ DDE.Copy32   = 10, SysWow64
 [IntelGfx.NTamd64.6.0]
 %iILKGM0% = iILKM0, PCI\VEN_8086&DEV_0046
 %iILKG0% = iILKD0, PCI\VEN_8086&DEV_0042
-%iSNBGM1%   = iSNBM0, PCI\VEN_8086&DEV_0106
-%iSNBGD1%    = iSNBD0, PCI\VEN_8086&DEV_0102
-%iSNBGM2%   = iSNBM0, PCI\VEN_8086&DEV_0116
-%iSNBGD2%    = iSNBD0, PCI\VEN_8086&DEV_0112
-%iSNBGM2P% = iSNBM0, PCI\VEN_8086&DEV_0126
-%iSNBGD2P%  = iSNBD0, PCI\VEN_8086&DEV_0122
-%iSNBGD3%        = iSNBD0, PCI\VEN_8086&DEV_010A
 
 ;
 ; General installation section
@@ -273,183 +266,6 @@ RegisterDLLs = igfx_RegisterDLLs
 [iILKD0.HW]
 AddReg = igfx_MSI_HardwareDeviceSettings
 
-[iSNBM0]
-FeatureScore=E6
-CopyFiles=igfx.Miniport, igfx.UserMode, MedKrnG600.Copy, MedKrnG600.Copy32, DDE.Copy, DDE.Copy32, Opm.Copy, igfx.UMWow, Installer_Copy , CUI.Copy , CUISDK.Copy , CUISDK.Copy32 , Resource.Copy , OpenGL.Copy , OpenGL.Copy32
-AddReg = igfx_SoftwareDX11Settings
-AddReg = igfx_SoftwareCommonSettings
-DelReg  = igfx_RemoveDeviceSettings
-
-AddReg = CUI.AddReg
-AddReg = CUISDK.AddReg
-
-DelReg  = CUI.DelReg
-DelReg  = CUISDK.DelReg
-
-AddReg = OpenGL.AddReg , OpenGL.AddRegSmch.SNB
-
-AddReg = OEMStaticMode_AddSwSettings
-DelReg  = OEMStaticMode_DelSwSettings
-AddReg = HotPlug_AddSwSettings
-DelReg  = HotPlug_DelSwSettings
-AddReg = General_AddSwSettings
-DelReg  = General_DelSwSettings
-AddReg = Underscan_AddSwSettings
-DelReg  = Underscan_DelSwSettings
-AddReg = PwrCons_SNB_AddSwSettings
-DelReg  = PwrCons_SNB_DelSwSettings
-AddReg = PwrCons_DPS_AddSwSettings
-DelReg  = PwrCons_DPS_DelSwSettings
-AddReg = SDVOHDMI_VSI_AddSwSettings
-DelReg  = SDVOHDMI_VSI_DelSwSettings
-AddReg = NonEDIDMode_AddSwSettings
-DelReg  = NonEDIDMode_DelSwSettings
-AddReg = DynamicScaling_AddSwSettings
-DelReg  = DynamicScaling_DelSwSettings
-AddReg = CRTHotPlugDefaultVrefVoltage_AddSwSettings
-DelReg  = CRTHotPlugDefaultVrefVoltage_DelSwSettings
-AddReg = MediaSrcMode_AddSwSettings
-DelReg  = MediaSrcMode_DelSwSettings
-AddReg = MediaScaling_AddSwSettings
-DelReg  = MediaScaling_DelSwSettings
-AddReg = HDMICEATimings_AddSwSettings
-DelReg  = HDMICEATimings_DelSwSettings
-AddReg = SdvoDdcEdidRead_AddSwSettings
-DelReg  = SdvoDdcEdidRead_DelSwSettings
-AddReg = AsyncFlips_AddSwSettings
-DelReg  = AsyncFlips_DelSwSettings
-AddReg = EnableHDMIUnderScan_AddSwSettings
-DelReg  = EnableHDMIUnderScan_DelSwSettings
-AddReg = DelayedDetectionForDP_AddSwSettings
-DelReg  = DelayedDetectionForDP_DelSwSettings
-AddReg = DelayedDetectionForHDMI_AddSwSettings
-DelReg  = DelayedDetectionForHDMI_DelSwSettings
-AddReg = EnableInterlacedModeRemoval_AddSwSettings
-DelReg  = EnableInterlacedModeRemoval_DelSwSettings
-AddReg = ForceBorderForMAR_AddSwSettings
-DelReg  = ForceBorderForMAR_DelSwSettings
-AddReg = Gen6IntLVDSSwing_AddSwSettings
-DelReg  = Gen6IntLVDSSwing_DelSwSettings
-AddReg = INFHotPlug_AddSwSettings
-DelReg  = INFHotPlug_DelSwSettings
-AddReg = INFVBTOverride_AddSwSettings
-DelReg  = INFVBTOverride_DelSwSettings
-AddReg = CRTScaler_AddSwSettings
-DelReg  = CRTScaler_DelSwSettings
-AddReg = IncFixedSegWA_AddSwSettings
-DelReg  = IncFixedSegWA_DelSwSettings
-AddReg = igfx_TPV_AddSwSettings
-DelReg  = igfx_TPV_DelSwSettings
-AddReg = RedBlankingPnl_AddSwSettings
-DelReg  = RedBlankingPnl_DelSwSettings
-AddReg = PNM_AddSwSettings
-DelReg  = PNM_DelSwSettings
-AddReg = BitBashingSupport_AddSwSettings
-DelReg  = BitBashingSupport_DelSwSettings
-AddReg = BitBashingForHDCP_AddSwSettings
-DelReg  = BitBashingForHDCP_DelSwSettings
-AddReg = PanelFitterOnDP_AddSwSettings
-DelReg  = PanelFitterOnDP_DelSwSettings
-AddReg = XVYCCFeatture_AddSwSettings
-DelReg  = XVYCCFeatture_DelSwSettings
-AddReg = WGFeature_AddSwSettings
-DelReg = WGFeature_DelSwSettings
-AddReg = DeepColorHDMI_AddSwSettings
-DelReg  = DeepColorHDMI_DelSwSettings
-AddReg = MediaRefreshRateMode_AddSwSettings
-DelReg  = MediaRefreshRateMode_DelSwSettings
-AddReg = SNBM_MBMSettings_AddSwSettings
-DelReg  = SNBM_MBMSettings_DelSwSettings
-AddReg = PdTogglingTimer_AddSwSettings
-DelReg = PdTogglingTimer_DelSwSettings
-RegisterDLLs = igfx_RegisterDLLs
-
-AddPowerSetting = PowerPlanSettings
-
-[iSNBM0.HW]
-AddReg = igfx_MSI_HardwareDeviceSettings
-
-[iSNBD0]
-FeatureScore=E6
-CopyFiles=igfx.Miniport, igfx.UserMode, MedKrnG600.Copy, MedKrnG600.Copy32, DDE.Copy, DDE.Copy32, Opm.Copy, igfx.UMWow, Installer_Copy , CUI.Copy , CUISDK.Copy , CUISDK.Copy32 , Resource.Copy , OpenGL.Copy , OpenGL.Copy32
-AddReg =  igfx_SoftwareDX11Settings
-AddReg =  igfx_SoftwareCommonSettings
-DelReg =   igfx_RemoveDeviceSettings
-
-AddReg = CUI.AddReg
-AddReg = CUISDK.AddReg
-
-DelReg  = CUI.DelReg
-DelReg  = CUISDK.DelReg
-
-AddReg = OpenGL.AddReg , OpenGL.AddRegSmch.SNB
-
-AddReg =  OEMStaticMode_AddSwSettings
-DelReg  =  OEMStaticMode_DelSwSettings
-AddReg =  HotPlug_AddSwSettings
-DelReg  =  HotPlug_DelSwSettings
-AddReg =  Underscan_AddSwSettings
-DelReg  =  Underscan_DelSwSettings
-AddReg =  PwrCons_SNB_AddSwSettings
-DelReg  =  PwrCons_SNB_DelSwSettings
-AddReg =  SDVOHDMI_VSI_AddSwSettings
-DelReg  =  SDVOHDMI_VSI_DelSwSettings
-AddReg =  NonEDIDMode_AddSwSettings
-DelReg  =  NonEDIDMode_DelSwSettings
-AddReg =  DynamicScaling_AddSwSettings
-DelReg  =  DynamicScaling_DelSwSettings
-AddReg =  CRTHotPlugDefaultVrefVoltage_AddSwSettings
-DelReg  =  CRTHotPlugDefaultVrefVoltage_DelSwSettings
-AddReg =  MediaSrcMode_AddSwSettings
-DelReg  =  MediaSrcMode_DelSwSettings
-AddReg =  MediaScaling_AddSwSettings
-DelReg  =  MediaScaling_DelSwSettings
-AddReg =  HDMICEATimings_AddSwSettings
-DelReg  =  HDMICEATimings_DelSwSettings
-AddReg =  SdvoDdcEdidRead_AddSwSettings
-DelReg  =  SdvoDdcEdidRead_DelSwSettings
-AddReg =  AsyncFlips_AddSwSettings
-DelReg  =  AsyncFlips_DelSwSettings
-AddReg = EnableHDMIUnderScan_AddSwSettings
-DelReg  = EnableHDMIUnderScan_DelSwSettings
-AddReg = DelayedDetectionForDP_AddSwSettings
-DelReg  = DelayedDetectionForDP_DelSwSettings
-AddReg = DelayedDetectionForHDMI_AddSwSettings
-DelReg  = DelayedDetectionForHDMI_DelSwSettings
-AddReg =  EnableInterlacedModeRemoval_AddSwSettings
-DelReg  =  EnableInterlacedModeRemoval_DelSwSettings
-AddReg =  ForceBorderForMAR_AddSwSettings
-DelReg  =  ForceBorderForMAR_DelSwSettings
-AddReg =  CRTScaler_AddSwSettings
-DelReg  =  CRTScaler_DelSwSettings
-AddReg =  IncFixedSegWA_AddSwSettings
-DelReg  =  IncFixedSegWA_DelSwSettings
-AddReg =  igfx_TPV_AddSwSettings
-DelReg  =  igfx_TPV_DelSwSettings
-AddReg =  BitBashingSupport_AddSwSettings
-DelReg  =  BitBashingSupport_DelSwSettings
-AddReg =  BitBashingForHDCP_AddSwSettings
-DelReg  =  BitBashingForHDCP_DelSwSettings
-AddReg =  PanelFitterOnDP_AddSwSettings
-DelReg  =  PanelFitterOnDP_DelSwSettings
-AddReg = XVYCCFeatture_AddSwSettings
-DelReg  = XVYCCFeatture_DelSwSettings
-AddReg = WGFeature_AddSwSettings
-DelReg = WGFeature_DelSwSettings
-
-AddReg = DeepColorHDMI_AddSwSettings
-DelReg  = DeepColorHDMI_DelSwSettings
-AddReg =  MediaRefreshRateMode_AddSwSettings
-DelReg  =  MediaRefreshRateMode_DelSwSettings
-AddReg = PdTogglingTimer_AddSwSettings
-DelReg = PdTogglingTimer_DelSwSettings
-AddReg =  Enable3DContexts_SNBD0_AddSwSettings
-DelReg =  Enable3DContexts_SNBD0_DelSwSettings
-RegisterDLLs = igfx_RegisterDLLs
-
-[iSNBD0.HW]
-AddReg = igfx_MSI_HardwareDeviceSettings
-
 [iILKM0.CoInstallers]
 AddReg = CoInst.AddReg
 CopyFiles = CoInst.CopyFiles
@@ -458,19 +274,11 @@ CopyFiles = CoInst.CopyFiles
 AddReg = CoInst.AddReg
 CopyFiles = CoInst.CopyFiles
 
-[iSNBM0.CoInstallers]
-AddReg = CoInst.AddReg
-CopyFiles = CoInst.CopyFiles
-
-[iSNBD0.CoInstallers]
-AddReg = CoInst.AddReg
-CopyFiles = CoInst.CopyFiles
-
 [CoInst.AddReg]
-HKR,, CoInstallers32, %REG_MULTI_SZ%, "igfxCoIn_v2827.dll, CoDeviceInstall"
+HKR,, CoInstallers32, %REG_MULTI_SZ%, "igfxCoIn_v2993.dll, CoDeviceInstall"
 
 [CoInst.CopyFiles]
-igfxCoIn_v2827.dll,igxpco64.dll,,0x00000010
+igfxCoIn_v2993.dll,igxpco64.dll,,0x00000010
 
 ;
 ; File sections
@@ -655,18 +463,6 @@ HKR,, _oglapp_cinebench r10.exe, %REG_DWORD%, 0x00000001
 HKR,, _oglapp_cinebench r10 64bit.exe, %REG_DWORD%, 0x00000001
 HKR,, _oglapp_Viewperf.exe, %REG_DWORD%, 0x00000008
 HKR,, @Minecraft, %REG_DWORD%, 0x00000001
-HKR,, _oglapp_CNEXT.exe, %REG_DWORD%, 0x00000080
-HKR,, _oglapp_DMU.exe, %REG_DWORD%, 0x00000080
-
-[OpenGL.AddRegSmch.SNB]
-HKR,, _oglapp_UT2004.exe, %REG_DWORD%, 0x00000001
-HKR,, _oglapp_CM09OGL.exe, %REG_DWORD%, 0x00000002
-HKR,, _oglapp_Photoshop.exe, %REG_DWORD%, 0x00000005
-HKR,, _oglapp_Viewperf.exe, %REG_DWORD%, 0x00000008
-HKR,, _oglapp_FJVPS.exe, %REG_DWORD%, 0x00000010
-HKR,, _oglapp_Amnesia.exe, %REG_DWORD%, 0x00000020
-HKR,, @Minecraft, %REG_DWORD%, 0x00000001
-HKR,, _oglapp_etqw.exe, %REG_DWORD%, 0x00000040
 HKR,, _oglapp_CNEXT.exe, %REG_DWORD%, 0x00000080
 HKR,, _oglapp_DMU.exe, %REG_DWORD%, 0x00000080
 
@@ -880,12 +676,6 @@ AddService = igfx, 0x00000002, igfx_Service_Inst
 [iILKD0.Services]
 AddService = igfx, 0x00000002, igfx_Service_Inst
 
-[iSNBM0.Services]
-AddService = igfx, 0x00000002, igfx_Service_Inst
-
-[iSNBD0.Services]
-AddService = igfx, 0x00000002, igfx_Service_Inst
-
 [igfx_Service_Inst]
 ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
 StartType      = 3               ; SERVICE_DEMAND_START
@@ -924,18 +714,6 @@ HKR,, PanelLUTTableValidSize,%REG_DWORD%, 0 ; 63 -need to put 63 here i.e size h
 HKR,, PanelLUTTable,%REG_BINARY%, 0 ;default sample- 33,30,38,10,13,3,17,0,0,70,71,64,56,51,48,4,35,24,114,116,103,96,88,81,72,59,44,155,152,145,137,128,117,105,86,61,194,191,188,181,173,160,145,120,83,225,225,223,219,215,207,192,163,119,248,248,248,246,244,240,237,224,170  Default sample
 
 [ILKM_MBMSettings_DelSwSettings]
-HKR,, Display1_ENABLEMBM
-HKR,, PrefCUIMBM
-HKR,, PanelLUTTableValidSize
-HKR,, PanelLUTTable
-
-[SNBM_MBMSettings_AddSwSettings]
-HKR,, Display1_ENABLEMBM,%REG_DWORD%, 0
-HKR,, PrefCUIMBM,%REG_DWORD%, 0
-HKR,, PanelLUTTableValidSize,%REG_DWORD%, 0 ; 63 -need to put 63 here i.e size has to be 63 
-HKR,, PanelLUTTable,%REG_BINARY%, 0 ;default sample- 33,30,38,10,13,3,17,0,0,70,71,64,56,51,48,4,35,24,114,116,103,96,88,81,72,59,44,155,152,145,137,128,117,105,86,61,194,191,188,181,173,160,145,120,83,225,225,223,219,215,207,192,163,119,248,248,248,246,244,240,237,224,170  Default sample
-
-[SNBM_MBMSettings_DelSwSettings]
 HKR,, Display1_ENABLEMBM
 HKR,, PrefCUIMBM
 HKR,, PanelLUTTableValidSize
@@ -1295,18 +1073,6 @@ HKR,, FeatureTestControl,%REG_DWORD%, 0xF800 ; Enable FBC, GSV, RC6, DPS, DPST5,
 [PwrCons_ILK_DelSwSettings]
 HKR,, FeatureTestControl
 
-[PwrCons_SNB_AddSwSettings]
-HKR,, FeatureTestControl,%REG_DWORD%, 0xF800 
-HKR,, RsDisableDeepRC6,%REG_DWORD%, 1
-HKR,, GsvApplyIACapForDesktop,%REG_DWORD%, 0
-HKR,, GsvApplyIACapForMobile,%REG_DWORD%, 0xE	; ApplyIACapForSvAC = 0, ApplyIACapForSvDC = 1, ApplyIACapForSffAC = 1, ApplyIACapForSffDC = 1
-
-[PwrCons_SNB_DelSwSettings]
-HKR,, FeatureTestControl
-HKR,, RsDisableDeepRC6
-HKR,, GsvApplyIACapForDesktop
-HKR,, GsvApplyIACapForMobile
-
 [PwrCons_DPS_AddSwSettings]
 HKR,, DPSCheckboxDefault,%REG_DWORD%, 0x1
 HKR,, DPSBaseLoRRValue,%REG_DWORD%, 0x0
@@ -1411,16 +1177,6 @@ HKR,, PdTogglingTimerValue,%REG_DWORD%, 0xBF ;  Bug 3885162, increasing the dela
 [PdTogglingTimer_DelSwSettings]
 HKR,, PdTogglingTimerValue
 
-[Enable3DContexts_SNBD0_AddSwSettings]
-; Workstation apps settings
-HKR,, @acad.exe, %REG_DWORD%, 1
-HKR,, @MstnBenchmark.exe, %REG_DWORD%, 1
-
-[Enable3DContexts_SNBD0_DelSwSettings]
-; Workstation apps settings
-HKR,, @acad.exe 
-HKR,, @MstnBenchmark.exe
-
 ; END DEVICE SPECIFIC INF SWITCHES
 
 [iILKM0.GeneralConfigData]
@@ -1428,14 +1184,6 @@ MaximumNumberOfDevices = 2
 MaximumDeviceMemoryConfiguration = 512
 
 [iILKD0.GeneralConfigData]
-MaximumNumberOfDevices = 2
-MaximumDeviceMemoryConfiguration = 512
-
-[iSNBM0.GeneralConfigData]
-MaximumNumberOfDevices = 2
-MaximumDeviceMemoryConfiguration = 512
-
-[iSNBD0.GeneralConfigData]
 MaximumNumberOfDevices = 2
 MaximumDeviceMemoryConfiguration = 512
 
@@ -2127,13 +1875,7 @@ DiskId      = "Intel(R) Graphics Media Accelerator Driver for Windows"
 Intel       = "Intel Corporation"
 iILKGM0     = "Intel(R) HD Graphics"
 iILKG0      = "Intel(R) HD Graphics"
-iSNBGM1     = "Intel(R) HD Graphics Family"
-iSNBGD1     = "Intel(R) HD Graphics Family"
-iSNBGM2     = "Intel(R) HD Graphics Family"
-iSNBGD2     = "Intel(R)  HD Graphics Family"
-iSNBGM2P    = "Intel(R) HD Graphics Family"
-iSNBGD2P    = "Intel(R) HD Graphics Family"
-iSNBGD3     = "Intel(R) HD Graphics Family"
+
 ;
 ; Do not modify or copy the following line
 ; set SIGNING_KEY_VERSION=2
